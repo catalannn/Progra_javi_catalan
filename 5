@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    
+    string nombres[10];
+    string nombreB;
+    char band = 'F';
+
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Ingrese un nombre: " << endl;
+        cin >> nombres[i];
+    }
+
+    cout << "\nIngrese el nombre a buscar: ";
+    cin >> nombreB;
+
+    // Algoritmo de búsqueda secuencial
+    int j = 0;
+    while ((band == 'F') && (j < 10)) {
+        if (nombres[j] == nombreB) {
+            band = 'v';
+        }
+        j++;
+    }
+
+    if (band == 'F') {
+        cout << "El nombre no se ha encontrado en el arreglo." << endl;
+    } else if (band == 'v') {
+        cout << "El nombre " << nombreB << " se ha encontrado en la posicion " << j << endl;
+    }
+
+    return 0;
+}
