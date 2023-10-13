@@ -1,0 +1,46 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+    int alumnos = 5;
+    float promedio;
+    int calificaciones = 7;
+    float matriz[alumnos][calificaciones];
+    for (int i = 0; i < alumnos; i++) {
+        cout << "Ingrese las calificaciones del alumno " << i + 1 << ":" << endl;
+        for (int j = 0; j < calificaciones; j++) {
+            cout << "Calificacion " << j + 1 << ": ";
+            cin >> matriz[i][j];
+        }
+    }
+    cout << "Imprimiendo Calificaciones"<<endl;
+    for (int k = 0; k < alumnos; k++) {
+        for (int l = 0; l < calificaciones; l++) {
+            cout << matriz[k][l] << " ";
+        }
+        cout << endl;
+    }
+    cout << "Calculando y mostrando promedios"<<endl;
+    for (int m = 0; m < alumnos; m++) {
+        float suma = 0;
+        for (int n = 0; n < calificaciones; n++) {
+            suma += matriz[m][n];
+    }
+	promedio = suma / calificaciones;
+            cout<<promedio<<;     	
+	cout << "Promedio del alumno " << m + 1 << ": " << promedio << " - ";
+        if (promedio == 100) {
+            cout << "Excelente";
+        } else if (promedio >= 90) {
+            cout << "Muy bien";
+        } else if (promedio >= 80) {
+            cout << "Bien";
+        } else if (promedio >= 70) {
+            cout << "Hay que mejorar";
+        } else {
+            cout << "Reprobado";
+        }
+        cout << endl;	    
+}
+return 0;
+}
