@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main(){
+
+	int filas, columnas;
+	
+	cout<<"ingrese la cantidad de filas: "<<endl;
+	cin>>filas;
+	cout<<"ingrese la cantidad de columnas: "<<endl;
+	cin>>columnas;
+	
+	int matriz[filas][columnas];
+	for(int i=0; i<filas; i++){
+		for(int j=0; j<columnas; j++){
+			cout<<"ingrese el dato de la posicion "<<i+1<<","<<j+1<<": "<<endl;
+			cin>>matriz[i][j];
+		}
+	}
+	cout<<"\nImprimiendo Matriz\n";
+	for(int k=0; k<filas; k++){
+		for(int l=0; l<columnas; l++){
+			cout<<matriz[k][l]<<" ";
+		}
+		cout<<endl;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+	getch();	
+}
